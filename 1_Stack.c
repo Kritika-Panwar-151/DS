@@ -21,7 +21,7 @@ void main()
 
     while(check=='y')
     {
-        printf("Enter option 1:Push 2:Pop 3:Display 4:Top:");
+        printf("\nEnter option 1:Push 2:Pop 3:Display 4:Top:");
         scanf("%d",&op);
         switch(op)
         {
@@ -42,7 +42,7 @@ void main()
             default:
                 printf("Wrong input");
         }
-        printf("\nDo you wnat to continue:(y/n)?");
+        printf("Do you wnat to continue:(y/n)?");
         scanf(" %c",&check);
     }
 
@@ -75,6 +75,7 @@ void push(int n)
     if(isfull())
     {
         printf("Overflow");
+        printf("\n");
     }
     else
     {
@@ -87,10 +88,12 @@ void pop()
     if(isempty())
     {
         printf("Underflow");
+        printf("\n");
     }
     else
     {
         printf("Popped element:%d",stack[pointer--]);
+        printf("\n");
     }
 
 }
@@ -99,6 +102,7 @@ void display()
     if(isempty())
     {
         printf("Underflow");
+        printf("\n");
     }
     else
     {
@@ -106,6 +110,7 @@ void display()
         {
             printf("%d ",stack[i]);
         }
+        printf("\n");
     }
 
 }
@@ -118,5 +123,6 @@ void top()
     else
     {
         printf("Top element:%d",stack[pointer]);
+        printf("\n");
     }
 }
