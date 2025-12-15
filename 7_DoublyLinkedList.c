@@ -27,7 +27,7 @@ void insert()
 
 void delete_val()
 {
-    if(head==NULL) printf("Empty List");
+    if(head==NULL) printf("Empty List\n");
     else
     {
         int n;
@@ -45,7 +45,7 @@ void delete_val()
             }
             temp=temp->next;
         }
-        if(flag==0) printf("Value not found");
+        if(flag==0) printf("Value not found\n");
         else
         {
             n=temp->val;
@@ -70,7 +70,7 @@ void delete_val()
                 }
 
             }
-            printf("Value deleted:%d",n);
+            printf("Value deleted:%d\n",n);
         }
 
 
@@ -80,7 +80,7 @@ void delete_val()
 
 void display()
 {
-    if(head==NULL) printf("Empty list");
+    if(head==NULL) printf("Empty list\n");
     else
     {
         temp=head;
@@ -89,6 +89,7 @@ void display()
             printf("%d ",temp->val);
             temp=temp->next;
         }
+        printf("\n");
     }
 }
 
@@ -98,7 +99,7 @@ void main()
     char c='y';
     while(c=='y')
     {
-        printf("Enter 1:Insert 2:Delete_val 3:Display :");
+        printf("\nEnter 1:Insert 2:Delete_val 3:Display :");
         scanf("%d",&op);
         switch(op)
         {
@@ -113,10 +114,10 @@ void main()
             break;
 
         default:
-            printf("Wrong option");
+            printf("Wrong option\n");
 
         }
-        printf("\nContinue(y/n):");
+        printf("Continue(y/n):");
         scanf(" %c",&c);
     }
 }
