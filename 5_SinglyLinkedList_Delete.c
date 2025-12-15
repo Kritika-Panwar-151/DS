@@ -58,7 +58,8 @@ void insert_position(int val)
     {
         if(check==NULL)
         {
-            printf("Out of bounds\n");
+            printf("Out of bounds");
+            printf("\n");
             return;
         }
         check=check->next;
@@ -78,6 +79,7 @@ void display()
     if(head==NULL)
     {
         printf("Empty list");
+        printf("\n");
     }
     else
     {
@@ -95,6 +97,7 @@ void delete_beg()
     if(head==NULL)
     {
         printf("Empty List");
+        printf("\n");
     }
     else
     {
@@ -118,6 +121,7 @@ void delete_end()
     if(head==NULL)
     {
         printf("Empty List");
+        printf("\n");
     }
     else
     {
@@ -143,43 +147,48 @@ void delete_end()
     }
 
 }
-void delete_pos()
+void delete_element()
 {
-    if(head==NULL)
+    if(head == NULL)
     {
         printf("Empty List");
+        printf("\n");
+        return;
     }
-    else
+
+    int val;
+    printf("Enter element to delete:");
+    scanf("%d", &val);
+
+    if(head->data == val)
     {
-        int pos;
-        printf("Enter the position:");
-        scanf("%d",&pos);
-        if(pos==1)
-        {
-            delete_beg();
-            return;
-        }
-        temp1=NULL;
-        temp2=head;
-        for(int i=1;i<pos;i++)
-        {
-            if(temp2==NULL)
-            {
-                printf("Out of bounds");
-                return;
-            }
-            temp1=temp2;
-            temp2=temp2->next;
-        }
-
-        temp1->next=temp2->next;
-        free(temp2);
-        if(temp1->next==NULL)
-        {
-            tail=temp1;
-        }
+        delete_beg();
+        return;
     }
 
+    temp1 = head;
+    temp2 = head->next;
+
+    while(temp2 != NULL && temp2->data != val)
+    {
+        temp1 = temp2;
+        temp2 = temp2->next;
+    }
+
+    if(temp2 == NULL)
+    {
+        printf("Element not found");
+        printf("\n");
+        return;
+    }
+
+    temp1->next = temp2->next;
+
+    if(temp2 == tail)
+    {
+        tail = temp1;
+    }
+    free(temp2);
 }
 
 
@@ -190,7 +199,7 @@ void main()
     char check='y';
     while(check=='y')
     {
-        printf("\nEnter option 1:Insert front 2:Insert end 3:Insert position 4:Delete front 5:Delete end 6:Delete position 7:Display:");
+        printf("\nEnter option 1:Insert front 2:Insert end 3:Insert position 4:Delete front 5:Delete end 6:Delete element 7:Display:");
         scanf("%d",&op);
         switch(op)
         {
@@ -216,7 +225,7 @@ void main()
             delete_end();
             break;
         case 6:
-            delete_pos();
+            delete_element();
             break;
         case 7:
             display();
@@ -229,4 +238,3 @@ void main()
         scanf(" %c",&check);
     }
 }
-
