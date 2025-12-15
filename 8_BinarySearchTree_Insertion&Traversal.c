@@ -30,6 +30,7 @@ void insert(struct node* root,struct node* temp)
         if(root->left!=NULL) insert(root->left,temp);
         else root->left=temp;
     }
+
 }
 
 void inorder(struct node* root)
@@ -40,6 +41,7 @@ void inorder(struct node* root)
         printf("%d ",root->val);
         inorder(root->right);
     }
+
 }
 
 void preorder(struct node* root)
@@ -50,6 +52,7 @@ void preorder(struct node* root)
         preorder(root->left);
         preorder(root->right);
     }
+
 }
 
 void postorder(struct node* root)
@@ -60,6 +63,7 @@ void postorder(struct node* root)
         postorder(root->right);
         printf("%d ",root->val);
     }
+
 }
 
 void main()
@@ -78,10 +82,15 @@ void main()
 
     printf("\nPreorder:");
     preorder(root);
+    printf("\n\n");
 
-    printf("\nInorder:");
+    printf("Inorder:");
     inorder(root);
+    printf("\n\n");
 
-    printf("\nPostorder:");
+
+    printf("Postorder:");
     postorder(root);
+    printf("\n\n");
+
 }
