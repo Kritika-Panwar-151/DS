@@ -38,6 +38,7 @@ void enqueue(int n)
     if(isfull())
     {
         printf("Overflow");
+        printf("\n");
     }
     else if(isempty())
     {
@@ -57,6 +58,7 @@ void dequeue()
     if(isempty())
     {
         printf("Underflow");
+        printf("\n");
         return;
     }
     else if(front==rear)
@@ -70,18 +72,21 @@ void dequeue()
         front++;
     }
     printf("Removed element:%d",p);
+    printf("\n");
 }
 void display()
 {
     if(isempty())
     {
         printf("Underflow");
+        printf("\n");
     }
     else
     {
         for(int i=front;i<=rear;i++)
         {
             printf("%d ",queue[i]);
+            printf("\n");
         }
     }
 }
@@ -90,10 +95,12 @@ void peek()
     if(isempty())
     {
         printf("Underflow");
+        printf("\n");
     }
     else
     {
         printf("Element at front:%d",queue[front]);
+        printf("\n");
     }
 }
 
@@ -104,7 +111,7 @@ void main()
     int n;
     while(check=='y')
     {
-        printf("ENter 1:Enqueue 2:Dequeue 3:Display 4:Peek:");
+        printf("\nEnter 1:Enqueue 2:Dequeue 3:Display 4:Peek:");
         scanf("%d",&op);
         switch(op)
         {
@@ -125,7 +132,7 @@ void main()
         default:
             printf("Wrong option");
         }
-        printf("\nDo you want to continue(y/n)?");
+        printf("Do you want to continue(y/n)?");
         scanf(" %c",&check);
     }
 }
