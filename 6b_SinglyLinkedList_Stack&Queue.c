@@ -20,10 +20,10 @@ void push()
 
 void pop()
 {
-    if(head1==NULL) printf("Empty stack");
+    if(head1==NULL) printf("Empty stack\n");
     else
     {
-        printf("Value popped:%d",head1->val);
+        printf("Value popped:%d\n",head1->val);
         temp=head1;
         head1=head1->next;
         free(temp);
@@ -32,7 +32,7 @@ void pop()
 
 void stack_display()
 {
-    if(head1==NULL) printf("Empty stack");
+    if(head1==NULL) printf("Empty stack\n");
     else
     {
         temp=head1;
@@ -41,6 +41,7 @@ void stack_display()
             printf("%d ",temp->val);
             temp=temp->next;
         }
+        printf("\n");
     }
 }
 
@@ -54,7 +55,7 @@ void enqueue()
     else
     {
         temp=head2;
-        while(temp->next=NULL)
+        while(temp->next!=NULL)
         {
             temp=temp->next;
         }
@@ -64,10 +65,10 @@ void enqueue()
 
 void dequeue()
 {
-    if(head2==NULL) printf("Empty queue");
+    if(head2==NULL) printf("Empty queue\n");
     else
     {
-        printf("Value dequeued:%d",head2->val);
+        printf("Value dequeued:%d\n",head2->val);
         temp=head2;
         head2=head2->next;
         free(temp);
@@ -76,7 +77,7 @@ void dequeue()
 
 void queue_display()
 {
-    if(head2==NULL) printf("Empty stack");
+    if(head2==NULL) printf("Empty stack\n");
     else
     {
         temp=head2;
@@ -85,6 +86,7 @@ void queue_display()
             printf("%d ",temp->val);
             temp=temp->next;
         }
+        printf("\n");
     }
 }
 
@@ -94,7 +96,7 @@ void main()
     char c='y';
     while(c=='y')
     {
-        printf("Enter 1:Push 2:Pop 3:Stack_Display 4:Peek 5:Enqueue 6:Dequeue 7:Queue_Display :");
+        printf("\nEnter 1:Push 2:Pop 3:Stack_Display 4:Peek 5:Enqueue 6:Dequeue 7:Queue_Display :");
         scanf("%d",&op);
         switch(op)
         {
@@ -108,8 +110,8 @@ void main()
             stack_display();
             break;
         case 4:
-            if(head1==NULL) printf("Empty stack");
-            else printf("%d",head1->val);
+            if(head1==NULL) printf("Empty stack\n");
+            else printf("%d\n",head1->val);
             break;
         case 5:
             enqueue();
@@ -121,10 +123,10 @@ void main()
             queue_display();
             break;
         default:
-            printf("Wrong option");
+            printf("Wrong option\n");
 
         }
-        printf("\nContinue(y/n):");
+        printf("Continue(y/n):");
         scanf(" %c",&c);
     }
 }
