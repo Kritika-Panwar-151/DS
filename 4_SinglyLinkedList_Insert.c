@@ -56,7 +56,8 @@ void insert_position(int val)
     {
         if(check==NULL)
         {
-            printf("Out of bounds\n");
+            printf("Out of bounds");
+            printf("\n");
             return;
         }
         check=check->next;
