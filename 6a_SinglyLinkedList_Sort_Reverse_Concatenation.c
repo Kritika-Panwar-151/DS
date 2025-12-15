@@ -114,7 +114,7 @@ void main()
 
     while(check=='y')
     {
-        printf("1:Insert in list1 2:Insert in list2:");
+        printf("\n1:Insert in list1 2:Insert in list2:");
         scanf("%d", &o);
 
         if(o == 1)
@@ -127,33 +127,40 @@ void main()
         printf("Continue?(y/n):");
         scanf(" %c", &check);
     }
+    printf("\n");
 
 
-    printf("\nList1: ");
+    printf("List1: ");
     display(head1);
+    printf("\n\n");
 
     head1=sort(head1);
-    printf("\nNew List1 Sorted: ");
+    printf("New List1 Sorted: ");
     display(head1);
+    printf("\n\n");
 
     head1=reverse(head1);
-    printf("\nNew List1 Reversed: ");
+    printf("New List1 Reversed: ");
     display(head1);
+    printf("\n\n");
 
 
-    printf("\nList2: ");
+    printf("List2: ");
     display(head2);
+    printf("\n\n");
 
     head2=sort(head2);
-    printf("\nNew List2 Sorted: ");
+    printf("New List2 Sorted: ");
     display(head2);
+    printf("\n\n");
 
     head2 = reverse(head2);
-    printf("\nNew List2 Reversed: ");
+    printf("New List2 Reversed: ");
     display(head2);
+    printf("\n\n");
 
 
-    printf("\nConcatenated List:");
+    printf("Concatenated List:");
     head1=concat(head1, head2);
     display(head1);
 }
