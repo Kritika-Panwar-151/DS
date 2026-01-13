@@ -3,6 +3,7 @@
 #define size 20
 #include<ctype.h>
 
+
 char stack[size];
 char postfix[size];
 char s[size];
