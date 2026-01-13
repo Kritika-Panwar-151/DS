@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 struct node
 {
     int val;
     struct node* next;
 };
+
 struct node* head1=NULL;
 struct node* head2=NULL;
 struct node* temp=NULL;
@@ -130,3 +132,4 @@ void main()
         scanf(" %c",&c);
     }
 }
+
