@@ -12,6 +12,7 @@ struct node *tail=NULL;
 struct node *temp1=NULL;
 struct node *temp2=NULL;
 
+
 void insert_front(int val)
 {
     struct node *newnode=(struct node*)malloc(sizeof(struct node));
