@@ -8,6 +8,7 @@ struct node
     int val;
 };
 
+
 struct node* createnode()
 {
     struct node* newnode=(struct node*)malloc(sizeof(struct node));
@@ -94,3 +95,4 @@ void main()
     printf("\n\n");
 
 }
+
