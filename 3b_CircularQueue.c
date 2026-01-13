@@ -4,6 +4,7 @@
 int queue[size];
 int front=-1,rear=-1;
 
+
 int isempty();
 int isfull();
 void enqueue(int n);
