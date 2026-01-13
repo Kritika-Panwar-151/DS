@@ -2,6 +2,7 @@
 int HT[20];
 int m;
 
+
 int hashFunction(int key)
 {
     return key % m;
