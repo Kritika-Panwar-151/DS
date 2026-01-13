@@ -12,7 +12,7 @@
 - **Semester**: 3
 - **Degree**: B.E. Engineering
 - **Programming Language**: C
-- **Type**: Academic / Lab Programs
+- **Type**: Lab Programs
 
 
 
