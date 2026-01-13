@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 void bfs(int graph[20][20], int vertices, int start)
 {
     int visited[20] = {0};
