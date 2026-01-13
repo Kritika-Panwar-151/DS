@@ -7,6 +7,7 @@ struct node
     struct node *next;
 };
 
+
 struct node *head=NULL;
 struct node *tail=NULL;
 
@@ -126,3 +127,4 @@ void main()
         scanf(" %c",&check);
     }
 }
+
