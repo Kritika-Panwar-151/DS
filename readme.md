@@ -5,7 +5,7 @@
 - Developed as part of B.E. Semester 3 Data Structures coursework
 - Covers fundamental data structures and algorithms
 
----
+
 
 ## Course Information
 - **Course Name**: Data Structures
@@ -14,7 +14,7 @@
 - **Programming Language**: C
 - **Type**: Academic / Lab Programs
 
----
+
 
 ## Programs Included
 
